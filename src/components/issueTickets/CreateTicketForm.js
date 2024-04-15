@@ -4,6 +4,7 @@ import createIssueTicket from '../../api/createIssueTicket';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Typography } from '@mui/material';
 
 const issueTicket = {
     name: '',
@@ -27,12 +28,30 @@ const CreateTicketForm = () => {
     });
     // Begin API call on form submission
     const onSubmit = (e) => {
-        e.preventDefault();
         createTicketMutation.mutate(ticket);
     };
 
     return (
-        <Box sx={{ margin: '15% 5% 0 5%' }} >
+        <>
+        <Typography 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                margin: '15% 0 1% 0',
+                fontSize: '2rem',
+                fontWeight: '700'
+            }}>
+                Submit your ticket request here
+            </Typography>
+            <Typography 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                fontSize: '1.5rem'
+            }}>
+                An admin will respond shortly.
+            </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '5% 5% 0 5%' }} >
             <form onSubmit={onSubmit}>
                 <TextField
                     required
@@ -64,11 +83,18 @@ const CreateTicketForm = () => {
                     variant="contained"
                     color="primary"
                     type="submit"
+                    sx={{
+                        marginTop: '1.2rem',
+                        padding: '1rem',
+                        fontSize: '1.25rem',
+                        width: '100%'
+                    }}
                 >
                     Submit Ticket
                 </Button>
             </form>
         </Box>
+        </>
     );
 };
 

@@ -22,6 +22,7 @@ const IssueTicket = ({ ticket }) => {
     const [openDialog, setDialogOpen] = useState(false);
     const [displayTicket, setDisplayTicket] = useState(ticket);
     const [newStatus, setNewStatus] = useState('');
+
     // ReactQuery mutate fn to update issue ticket status
     const createTicketMutation = useMutation({
         mutationFn: updateIssueTicketStatus,
