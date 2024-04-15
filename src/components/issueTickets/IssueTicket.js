@@ -136,7 +136,7 @@ const IssueTicket = ({ ticket }) => {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={closeResponseDialog}>Cancel</Button>
-                        <Button type="submit">Send</Button>
+                        <Button type="submit" onClick={closeResponseDialog}>Send</Button>
                     </DialogActions>
                 </Dialog>
             </TableCell>
