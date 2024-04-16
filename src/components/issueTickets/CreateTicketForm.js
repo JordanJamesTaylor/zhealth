@@ -32,11 +32,16 @@ const CreateTicketForm = () => {
     };
 
     return (
-        <>
-        <Typography 
+        <Box 
             sx={{ 
                 display: 'flex', 
-                justifyContent: 'center', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                marginTop: '10%'
+            }}
+        >
+        <Typography 
+            sx={{ 
                 margin: '15% 0 1% 0',
                 fontSize: '2rem',
                 fontWeight: '700'
@@ -94,7 +99,7 @@ const CreateTicketForm = () => {
                 </Button>
             </form>
         </Box>
-        </>
+        </Box>
     );
 };
 
