@@ -18,7 +18,12 @@ const AdminPage = () => {
     if(ticketsQuery.isError) return <pre>{JSON.stringify(ticketsQuery.error)}</pre>;
 
     return (
-        <Box sx={{ marginTop: '10%', padding: '2.5rem'}}>
+        <Box 
+            sx={{ 
+                marginTop: { xs: '10%', md: '0%' }, 
+                padding: '2.5rem'
+            }}
+        >
             <IssueTicketTable tickets={ticketsQuery} />
         </Box>
     );

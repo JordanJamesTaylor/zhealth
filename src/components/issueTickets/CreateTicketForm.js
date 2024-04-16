@@ -37,12 +37,12 @@ const CreateTicketForm = () => {
                 display: 'flex', 
                 flexDirection: 'column', 
                 alignItems: 'center', 
-                marginTop: '10%'
+                marginTop: { xs: '10%', md: '8%' },
             }}
         >
         <Typography 
             sx={{ 
-                margin: '15% 0 1% 0',
+                margin: { xs: '15% 0 1% 0', md: '1% 0 1% 0'},
                 fontSize: '2rem',
                 fontWeight: '700'
             }}>
@@ -56,7 +56,13 @@ const CreateTicketForm = () => {
             }}>
                 An admin will respond shortly.
             </Typography>
-        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '5% 5% 0 5%' }} >
+        <Box 
+            sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                margin: { xs: '5% 5% 0 5%', md: '0 5% 0 5%' } 
+            }} 
+        >
             <form onSubmit={onSubmit}>
                 <TextField
                     required
